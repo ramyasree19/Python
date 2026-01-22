@@ -1,0 +1,226 @@
+# DevOps-oriented Python Roadmap
+
+A compact, practical roadmap to learn Python with a DevOps & security focus. Structured in phased milestones with suggested resources, hands-on projects, and a parallel DSA track.
+
+---
+
+## Table of contents
+
+- [Overview](#overview)
+- [Phases](#phases)
+   - [Phase 1 — Foundations](#phase-1---foundations)
+   - [Phase 2 — Automation (DevOps Core)](#phase-2---automation-devops-core)
+   - [Phase 3 — Linux & Networking](#phase-3---linux--networking)
+   - [Phase 4 — Security & DevSecOps](#phase-4---security--devsecops)
+   - [Phase 5 — Cloud & DevOps Tooling](#phase-5---cloud--devops-tooling)
+- [Parallel: DSA for DevOps](#parallel-dsa-for-devops)
+- [Suggested routine](#suggested-routine)
+- [Mini-project ideas](#mini-project-ideas)
+- [Recommended repo layout](#recommended-repo-layout)
+- [Notes & ethics](#notes--ethics)
+
+---
+
+## Overview
+
+High-level learning flow:
+
+Foundations → Automation (DevOps core) → Linux & Networking → Security (DevSecOps) → Cloud tooling
+
+DSA runs in parallel as a short daily practice to strengthen fundamentals useful for automation and debugging.
+
+---
+
+## Phases
+
+### Phase 1 — Foundations (2–3 weeks)
+
+What to learn
+
+- Variables & data types
+- Lists, tuples, sets, dictionaries
+- Control flow: conditions & loops
+- Functions
+- File handling (read/write, context managers)
+- Exceptions & error handling
+- Modules, packages & virtual environments (venv / pip)
+- Basic OOP: classes and objects
+
+Why this matters for DevOps
+
+- Build automation scripts
+- Parse logs & config files
+- Create small CLI tools
+
+Success criteria
+
+- Write small scripts that read/write files and handle errors
+- Create a reusable module and run it inside a virtual env
+
+### Phase 2 — Automation (DevOps Core) (3–4 weeks)
+
+Core topics
+
+- Process & OS: `os`, `sys`, `subprocess`, `shutil`
+- Config & data: JSON, YAML
+- Text processing: `re` (regex)
+- CLI interfaces: `argparse` / `click`
+- Environment variables & secrets handling
+- Logging with `logging`
+
+Typical exercises
+
+- Disk usage monitor
+- Service health check script
+- Log parser with alerting hooks
+- Simple cron-style automation
+
+Recommended resources
+
+- "Python for DevOps" — Noah Gift (book)
+- TechWorld with Nana — automation tutorials
+
+### Phase 3 — Linux & Networking with Python (2–3 weeks)
+
+Networking topics
+
+- Sockets (TCP/UDP basics)
+- DNS lookups, HTTP requests
+- Basic packet concepts (intro only)
+
+Useful libraries
+
+- `socket`, `requests`, `paramiko` (SSH)
+- `psutil` for process/resource info
+- `netmiko` for network devices (optional)
+
+Hands-on examples
+
+- SSH into many servers and run commands
+- Port scanning and open-port checks (ethical testing only)
+- Network latency monitors and API health checks
+
+### Phase 4 — Security & DevSecOps Scripting (3–4 weeks)
+
+Security topics
+
+- Password strength & hashing
+- Token handling & secure storage
+- API security basics
+- Basic vulnerability scanning concepts
+
+Libraries to learn
+
+- `hashlib`, `bcrypt`, `cryptography`, `scapy`, `python-nmap`
+
+Project ideas
+
+- Port scanner (lab-only)
+- Brute-force detection from logs
+- TLS certificate expiry checker
+- IAM permission audit scripts
+
+Recommended learning
+
+- "Black Hat Python" (networking & automation chapters)
+- John Hammond / IppSec (video content)
+- PortSwigger Web Security Academy — conceptual learning: https://portswigger.net/web-security
+
+⚠️ Always test security tooling on your own infrastructure, labs, or explicitly permitted targets.
+
+### Phase 5 — Cloud & DevOps Tooling with Python (ongoing)
+
+Cloud SDKs & tools
+
+- AWS: `boto3`
+- Azure: `azure-sdk`
+- GCP: `google-cloud-*`
+
+Integrations
+
+- Terraform automation + Python wrappers
+- Kubernetes API client for audits & automation
+- CI/CD scripting and GitHub Actions automation
+
+Example uses
+
+- Auto-scale EC2 based on custom metrics
+- Periodic cleanup of unused cloud resources
+- Kubernetes health and security audits
+
+---
+
+## Parallel — DSA for DevOps (30–45 min/day)
+
+You don't need competitive-level speed; focus on fundamentals that help with debugging and automation logic.
+
+Focus areas
+
+- Arrays & strings
+- Hash maps / dictionaries (very important)
+- Stacks, queues
+- Trees (basic traversal)
+- Graphs (BFS / DFS basics)
+- Time & space complexity reasoning
+
+Suggested order: Arrays → Strings → HashMaps → Stacks/Queues → Trees → Graphs
+
+Resources: "Grokking Algorithms", NeetCode, Abdul Bari. Practice on LeetCode (easy → medium).
+
+---
+
+## Suggested routine
+
+Weekday (1.5–2 hrs)
+
+- 45 min — Python / DevOps scripting (hands-on)
+- 30 min — DSA practice or code kata
+- 15 min — Reading docs or watching a short video
+
+Weekend
+
+- Build or extend one mini-project and push to GitHub
+
+---
+
+## Mini-project ideas (progression)
+
+Beginner
+
+- Disk & memory monitor
+- Log parser with simple alerts
+- Password strength checker
+
+Intermediate
+
+- Multi-server SSH automation tool
+- Network port scanner (lab only)
+- TLS certificate expiry checker
+
+Advanced
+
+- IAM security audit tool
+- Kubernetes security scanner
+- Cloud cost optimization script
+
+---
+
+## Recommended repo layout (recruiter-friendly)
+
+```
+python-devops/
+├── automation/        # scripts and CLI tools
+├── networking/        # networking & ssh helpers
+├── security/          # security scripts & scanners (lab-only)
+├── cloud/             # cloud automation (boto3 / azure / gcp)
+├── dsa/               # practice problems + solutions
+└── README.md          # this roadmap
+```
+
+---
+
+## Notes & ethics
+
+- Keep commits small and descriptive. Push code and short README for each project.
+- Never run network or security scans against systems you don't own or have explicit permission to test.
+- Use virtual environments to manage dependencies and avoid conflicts.

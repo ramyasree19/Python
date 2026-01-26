@@ -41,3 +41,19 @@ print(c)
 x = 10
 del x # Deletes the variable x
 print(x)
+
+#Find the output of the below python code, for x=1.5
+x = int(input())
+print(x)
+# Explanation
+#input() function returns the input as a string. When int() tries to convert the string '1.5' into an integer, it *raises a ValueError* because '1.5' is not a valid integer literal.
+
+#Find the output of the below python code, for x = 5 and y = 5
+x = input()
+y = input()
+print(x+5) 
+#*Compilation Error* input() returns a string, and adding a string to an integer (x + 5) causes a type error.
+
+print("GFG ")
+print("Hello")
+#The print() function in Python automatically moves the cursor to a new line after printing.
